@@ -124,17 +124,18 @@ export default function CustomerLoginPage() {
 
             <div className="text-center space-y-2">
               <p className="text-sm text-muted-foreground">Don't have an account?</p>
-              <Link href="/auth/register">
-                <Button variant="outline" size="sm" className="text-sm bg-transparent">
-                  Create Account
-                </Button>
-              </Link>
-            </div>
-
-            <div className="mt-6 p-4 bg-muted/50 rounded-lg">
-              <p className="text-xs text-muted-foreground text-center">
-                For demo purposes, use any email and password to login
-              </p>
+              <div className="space-x-4">
+                <Link href="/auth/register">
+                  <Button variant="outline" size="sm" className="text-sm bg-transparent">
+                    Create Account
+                  </Button>
+                </Link>
+                <Link href="/deliverer">
+                  <Button type="submit" size="sm" className="bg-white border border-primary text-primary hover:text-white text-sm mt-4" disabled={isLoading}>
+                    Rider Login
+                  </Button>
+                </Link>
+              </div>
             </div>
 
             <div className="text-center mt-6">
